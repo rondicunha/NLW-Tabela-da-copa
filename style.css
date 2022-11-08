@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #121214;
+  background-image: url(./assets/images/bg.svg);
+  background-position-x: center;
+  background-position-y: 55.6%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+#app {
+  width: fit-content;
+  padding: 5.2rem 3.2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 6.2rem;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  gap: 3.2rem;
+  width: 60%;
+  margin: auto;
+  justify-content: center;
+}
+
+.card {
+  border-bottom: 3.2px solid #338af3;
+  padding: 2.5rem 2.5rem;
+  text-align: center;
+  background-color: #1d1c19;
+  border-radius: 6px;
+}
+
+.card h2 {
+  padding: 0.8rem 1.6rem;
+  border: 1px solid #338af3;
+  border-radius: 6px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+  color: #f7dd43;
+  font-size: 2rem;
+}
+
+.card h2 span {
+  color: #e1e1e6;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card ul li + li {
+  padding-top: 2.4rem;
+  border-top: 1px solid #323238;
+}
+
+.card ul li strong {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 100%;
+  color: #e1e1e6;
+}
+
+.card ul li strong:hover,
+.card ul li img:hover,
+.card h2:hover {
+  transform: scale(1.05);
+}
+
+.card ul li strong,
+.card ul li img,
+.card h2 {
+  transition: transform 0.5s;
+}
+
+.card {
+  opacity: 0;
+  animation: appear 0.3s forwards;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 40rem) {
+  #cards {
+    flex-direction: row;
+    max-width: 70rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 70rem) {
+  #cards {
+    flex-direction: row;
+    max-width: 105rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 105rem) {
+  #cards {
+    flex-direction: row;
+    max-width: 140rem;
+    flex-wrap: wrap;
+  }
+}
